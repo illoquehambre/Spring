@@ -3,13 +3,12 @@ package com.salesianostriana.dam.clasesproyecto.model;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-public class Producto {
+public class Mesa {
 	
 	
 	@Id
 	@GeneratedValue
 	private long id;
-	private String nombre;
-	private double precio;
-	private int cantidadDisponible;
+	private boolean ocupacion;
+	private Ticket cuenta;
 }
