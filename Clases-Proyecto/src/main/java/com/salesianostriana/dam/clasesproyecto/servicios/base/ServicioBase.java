@@ -1,9 +1,10 @@
-package com.salesianostriana.dam.clasesproyecto.service;
+package com.salesianostriana.dam.clasesproyecto.servicios.base;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface ServicioBase<T, ID>{
+public interface ServicioBase<T, ID> {
+
 	
 public List<T> findAll();
 	

@@ -29,5 +29,4 @@ public class Controlador {
 		return "SaludoYEnlace";
 
 	}
-
 }

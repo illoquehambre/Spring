@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -19,18 +19,18 @@
         <h1 class="text-center text-info mb-3">CARTA</h1>
         <ul id="accordion">
 
-            <li class="card">
+            <li class="card" th:each="categoria : ${categorias}">
                 <div class="card-header d-flex">
-                    <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
-                        Collapsible Group Item #1
+                    <a class="btn" data-bs-toggle="collapse" href="#collapseOne"  th:text="${categoria.nombre}">
+                        
                     </a>
                 </div>
                 <div id="collapseOne" class="collapse container" data-bs-parent="#accordion">
                     <ul >
-                        <li class="card-body d-flex border border-1 border-dark justify-content-around  row">
+                        <li class="card-body d-flex border border-1 border-dark justify-content-around  row" th:each="producto : ${productos}">
                             <img src="" alt="Una imagen" class="col-4 col-md-3">
-                            <div  class="col-4 col-md-3">Nombre producto</div>
-                            <div  class="col-4 col-md-3">Precio</div>
+                            <div  class="col-4 col-md-3" th:text="${producto.nombre}">Nombre producto</div>
+                            <div  class="col-4 col-md-3" th:text="${producto.precio}">Precio</div>
                             <form class="d-flex justify-content-between  mt-2 col-md-3 col-12">
                
                                 <input type="number" class="form-control  w-25" id="cantidad" name="cantidad">
@@ -41,147 +41,9 @@
     
                         </li>
     
-                        <li class="card-body d-flex border border-1 border-dark justify-content-around  row">
-                            <img src="" alt="Una imagen" class="col-4 col-md-3">
-                            <div  class="col-4 col-md-3">Nombre producto</div>
-                            <div  class="col-4 col-md-3">Precio</div>
-                            <form class="d-flex justify-content-between  mt-2 col-md-3 col-12">
-               
-                                <input type="number" class="form-control  w-25" id="cantidad" name="cantidad">
-                                
-                                <!--Calculado en base a Js-->
-                                <button type="submit " class=" btn btn-primary">Agregar</button>
-                            </form>
-    
-                        </li>
-                        <li class="card-body d-flex border border-1 border-dark justify-content-around  row">
-                            <img src="" alt="Una imagen" class="col-4 col-md-3">
-                            <div  class="col-4 col-md-3">Nombre producto</div>
-                            <div  class="col-4 col-md-3">Precio</div>
-                            <form class="d-flex justify-content-between  mt-2 col-md-3 col-12">
-               
-                                <input type="number" class="form-control  w-25" id="cantidad" name="cantidad">
-                                
-                                <!--Calculado en base a Js-->
-                                <button type="submit " class=" btn btn-primary">Agregar</button>
-                            </form>
-    
-                        </li>
                     </ul>
                 </div>
                 
-            </li>
-
-            <li class="card">
-                <div class="card-header">
-                    <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
-                        Collapsible Group Item #2
-                    </a>
-                </div>
-                <div id="collapseTwo" class="collapse container" data-bs-parent="#accordion">
-                    <ul >
-                        <li class="card-body d-flex border border-1 border-dark justify-content-around  row">
-                            <img src="" alt="Una imagen" class="col-4 col-md-3">
-                            <div  class="col-4 col-md-3">Nombre producto</div>
-                            <div  class="col-4 col-md-3">Precio</div>
-                            <form class="d-flex justify-content-between  mt-2 col-md-3 col-12">
-               
-                                <input type="number" class="form-control  w-25" id="cantidad" name="cantidad">
-                                
-                                <!--Calculado en base a Js-->
-                                <button type="submit " class=" btn btn-primary">Agregar</button>
-                            </form>
-    
-                        </li>
-    
-                        <li class="card-body d-flex border border-1 border-dark justify-content-around  row">
-                            <img src="" alt="Una imagen" class="col-4 col-md-3">
-                            <div  class="col-4 col-md-3">Nombre producto</div>
-                            <div  class="col-4 col-md-3">Precio</div>
-                            <form class="d-flex justify-content-between  mt-2 col-md-3 col-12">
-               
-                                <input type="number" class="form-control  w-25" id="cantidad" name="cantidad">
-                                
-                                <!--Calculado en base a Js-->
-                                <button type="submit " class=" btn btn-primary">Agregar</button>
-                            </form>
-    
-                        </li>
-                        <li class="card-body d-flex border border-1 border-dark justify-content-around  row">
-                            <img src="" alt="Una imagen" class="col-4 col-md-3">
-                            <div  class="col-4 col-md-3">Nombre producto</div>
-                            <div  class="col-4 col-md-3">Precio</div>
-                            <form class="d-flex justify-content-between  mt-2 col-md-3 col-12">
-               
-                                <input type="number" class="form-control  w-25" id="cantidad" name="cantidad">
-                                
-                                <!--Calculado en base a Js-->
-                                <button type="submit " class=" btn btn-primary">Agregar</button>
-                            </form>
-    
-                        </li>
-                    </ul>
-                </div>
-               
-            </li>
-
-            <li class="card">
-                <div class="card-header ">
-                    <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
-                        Collapsible Group Item #3
-                    </a>
-                </div>
-                <div id="collapseThree" class="collapse container" data-bs-parent="#accordion">
-                    <ul >
-                        <li class="card-body d-flex border border-1 border-dark justify-content-around  row">
-                            <img src="" alt="Una imagen" class="col-4 col-md-3">
-                            <div  class="col-4 col-md-3">Nombre producto</div>
-                            <div  class="col-4 col-md-3">Precio</div>
-                            <form class="d-flex justify-content-between  mt-2 col-md-3 col-12">
-               
-                                <input type="number" class="form-control  w-25" id="cantidad" name="cantidad">
-                                
-                                <!--Calculado en base a Js-->
-                                <button type="submit " class=" btn btn-primary">Agregar</button>
-                            </form>
-    
-                        </li>
-    
-                        <li class="card-body d-flex border border-1 border-dark justify-content-around  row">
-                            <img src="" alt="Una imagen" class="col-4 col-md-3">
-                            <div  class="col-4 col-md-3">Nombre producto</div>
-                            <div  class="col-4 col-md-3">Precio</div>
-                            <form class="d-flex justify-content-between  mt-2 col-md-3 col-12">
-               
-                                <input type="number" class="form-control  w-25" id="cantidad" name="cantidad">
-                                
-                                <!--Calculado en base a Js-->
-                                <button type="submit " class=" btn btn-primary">Agregar</button>
-                            </form>
-    
-                        </li>
-                        <li class="card-body d-flex border border-1 border-dark justify-content-around  row">
-                            <img src="" alt="Una imagen" class="col-4 col-md-3">
-                            <div  class="col-4 col-md-3">Nombre producto</div>
-                            <div  class="col-4 col-md-3">Precio</div>
-                            <form class="d-flex justify-content-between  mt-2 col-md-3 col-12">
-               
-                                <input type="number" class="form-control  w-25" id="cantidad" name="cantidad">
-                                
-                                <!--Calculado en base a Js-->
-                                <button type="submit " class=" btn btn-primary">Agregar</button>
-                            </form>
-    
-                        </li>
-                    </ul>
-                </div>
-                
-            </li>
-
-
-
-
-
             </li>
 
         </ul>

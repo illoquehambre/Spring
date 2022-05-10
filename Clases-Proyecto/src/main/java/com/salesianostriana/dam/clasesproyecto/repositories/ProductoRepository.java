@@ -1,5 +1,9 @@
 package com.salesianostriana.dam.clasesproyecto.repositories;
 
-public interface ProductoRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.salesianostriana.dam.clasesproyecto.model.Producto;
+
+public interface ProductoRepository extends JpaRepository<Producto, Long>{
 
 }

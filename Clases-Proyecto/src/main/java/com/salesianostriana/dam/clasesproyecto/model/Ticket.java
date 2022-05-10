@@ -6,6 +6,8 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
@@ -18,7 +20,11 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Ticket {
-		
+	
+	@Id
+	@GeneratedValue
+	private long id;
+	
 	@ToString.Exclude
 	@EqualsAndHashCode.Exclude
 	@OneToMany (mappedBy="ticket", fetch= FetchType.EAGER)
@@ -26,5 +32,6 @@ public class Ticket {
 	private LocalDateTime fecha;
 	//Indicar relación de la BD
 	private double total;
+	private boolean impreso;
 		
 }
