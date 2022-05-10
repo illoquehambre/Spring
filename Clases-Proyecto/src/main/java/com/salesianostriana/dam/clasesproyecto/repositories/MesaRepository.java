@@ -1,5 +1,5 @@
 package com.salesianostriana.dam.clasesproyecto.repositories;
 
-public interface ProductoRepository {
+public interface MesaRepository {
 
 }
