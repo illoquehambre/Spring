@@ -16,8 +16,12 @@ public List<T> findAll();
 	
 	public T edit(T a);
 	
+	public T add(T a);
+	
 	public void delete(T a);
 	
 	public void deleteById(ID id);
+
+
 	
 }

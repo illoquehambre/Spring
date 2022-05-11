@@ -41,6 +41,10 @@ public abstract class ServicioBaseImpl<T, ID, R extends JpaRepository<T, ID>> im
 	public T edit(T a) {
 		return save(a);
 	}
+	@Override
+	public T add(T a) {
+		return save(a);
+	}
 
 	@Override
 	public void delete(T a) {

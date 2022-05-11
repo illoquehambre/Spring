@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.salesianostriana.dam.clasesproyecto.model.Categoria;
@@ -20,20 +21,20 @@ public class CategoriaController {
 
 	private final CategoriaServicio categoriaServicio;
 
-	@GetMapping({ "/", "/listadoCategoria" })
-	public String listado(Model model, @RequestParam("q") Optional<String> optional) {
+	@GetMapping({ "/", "/categorias" })
+	public String listado(Model model,  Optional<String> optional) {
 
 		List<Categoria> categorias = new ArrayList<Categoria>();
-		if(optional.isEmpty()) {
+		
 			for (Categoria cat : categoriaServicio.findAll()) {
 				
 				categorias.add(cat);
 			}
 
 			model.addAttribute("categorias", categorias);
-		}
+		
 		
 
-		return "Carta2";
+		return "Categorias";
 	}
 }
