@@ -1,6 +1,7 @@
 package com.salesianostriana.dam.clasesproyecto.model;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -30,11 +31,19 @@ public class Categoria {
 	private long id;
 	private String nombre;
 	//Especificar tipo de enlace de Bd(oneToMany, manyToOne...)
-	//@Builder.Default
+	@Builder.Default
 	@ToString.Exclude
 	@EqualsAndHashCode.Exclude
 	@OneToMany (mappedBy="categoria", fetch= FetchType.EAGER)
-
-	private List <Producto> lista;
+	private List <Producto> productos = new ArrayList<>();
+	
+	
+	public Categoria(String nombre, List<Producto> productos) {
+		super();
+		this.nombre = nombre;
+		this.productos = productos;
+	}
+	
+	
 		
 }

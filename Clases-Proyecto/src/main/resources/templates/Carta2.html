@@ -28,15 +28,15 @@
                 <div id="collapseOne" class="collapse container" data-bs-parent="#accordion">
                     <ul >
                         <li class="card-body d-flex border border-1 border-dark justify-content-around  row" th:each="producto : ${productos}">
-                            <img src="" alt="Una imagen" class="col-4 col-md-3">
-                            <div  class="col-4 col-md-3" th:text="${producto.nombre}">Nombre producto</div>
-                            <div  class="col-4 col-md-3" th:text="${producto.precio}">Precio</div>
+                            <img th:src="${producto.url}" alt="Una imagen" class="col-4 col-md-3">
+                            <div  class="col-4 col-md-3" th:text="${producto.nombre}"></div>
+                            <div  class="col-4 col-md-3" th:text="${producto.precio}"></div>
                             <form class="d-flex justify-content-between  mt-2 col-md-3 col-12">
                
                                 <input type="number" class="form-control  w-25" id="cantidad" name="cantidad">
                                 
                                 <!--Calculado en base a Js-->
-                                <button type="submit " class=" btn btn-primary">Agregar</button>
+                                <button type="submit " class=" btn btn-primary"></button>
                             </form>
     
                         </li>
