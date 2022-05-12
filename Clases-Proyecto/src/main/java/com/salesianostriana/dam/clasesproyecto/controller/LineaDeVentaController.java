@@ -20,7 +20,7 @@ import lombok.RequiredArgsConstructor;
 
 public class LineaDeVentaController {
 
-	private final TicketServicio ticketServicio;
+	/*private final TicketServicio ticketServicio;
 	private final LineaDeVentaServicio lineaDeVentaServicio;
 	
 	@GetMapping({"/ticket"})
@@ -39,4 +39,5 @@ public class LineaDeVentaController {
 		
 		return "Productos";
 	}
+	*/
 }

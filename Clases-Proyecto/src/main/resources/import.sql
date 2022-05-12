@@ -1,0 +1,1 @@
+--INSERT INTO PODUCTO (id, nombre, precio, cantidadDisponible) VALUES (NEXTVAL(hibernate_sequence))

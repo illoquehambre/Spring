@@ -9,4 +9,5 @@ import com.salesianostriana.dam.clasesproyecto.servicios.base.ServicioBaseImpl;
 @Service
 public class CategoriaServicio extends ServicioBaseImpl<Categoria, Long, CategoriaRepository>{
 
+	
 }

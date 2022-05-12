@@ -1,0 +1,17 @@
+Creación de Base de datos y contenido
+- Crear archivo import.sql en /resources
+- Instalar pluggins Jboss
+- Mirar ejemplos de Ángel para poner las cosas necesarias en aplicattion.properties
+- Insertar Datos según el modelo de ejemplo
+- Mirar como se mira la base de datos con sus contenidos en el navegador **
+
+Seguridad
+- Para distintas partes el login es el mismo
+- Debe haber un log out tanto como un log in
+- Se crea un paquete security
+- Los usuarios NO van a la Base de Datos
+- Tendremos una clase usuario con minimo su nombre, password y rol. (el rol es un string, se puede llamar como queramos)
+- En el repositorio de uuario utilizaremos una anotación que impide que sea borrado desde fuera.
+- En la clase security config se copia el contenido del ejemplo. Solo se tendrá que se modificar las líneas 32 y 33 que indican las rutas que están protegidas y las que no
+- Esta clase tendrá que llevar las notaciones @EnableWebSecurity y @Configuration
+- Hay que meter la dependencia Thymelaf-extras-springSecurity

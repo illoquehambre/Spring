@@ -47,18 +47,7 @@ public class ProductoController {
 		return "Productos";
 	}
 	
-	/*@GetMapping("/productos/categorias/{id}")
-    public String productoPorCat(Model model, @PathVariable("id") Long Id) {
-
-        List<Producto> productos = new ArrayList<>();
-        for (Producto producto : productoServicio.findByCategoria(Id)) {
-            productos.add(producto);
-
-        }
-        model.addAttribute("productos", productos);
-
-        return "Productos";
-    }*/
+	/*
 	@GetMapping("/{id}/productos/nuevo")
 	public String mostrarFormulario(Model model) {
 		model.addAttribute("producto", new Producto());
@@ -70,6 +59,7 @@ public class ProductoController {
 		lineaDeVentaServicio.add(lv);
 		return "redirect:/ticket";//Podría ser también return "redirect:/list
 	}
+	*/
 	
 	 @ModelAttribute("categorias")
 	 public List<Categoria> categorias(){

@@ -47,8 +47,8 @@ public abstract class ServicioBaseImpl<T, ID, R extends JpaRepository<T, ID>> im
 	}
 
 	@Override
-	public void delete(T a) {
-		repositorio.delete(a);
+	public void delete(T id) {
+		repositorio.delete(id);
 	}
 
 	@Override

@@ -18,11 +18,11 @@
             <h1 class="text-center text-info mb-3 card-header">CARTA</h1>
             <li th:each="producto : ${productos}" class="card-body border border-1 border-dark my-3 d-flex" >
                     <span th:text="${producto.nombre}"></span> 
-                <form  th:object="${producto}" method="post">
+               <!-- <form  th:object="${producto}" method="post">
                         <input type="hidden" name="producto" th:field="*{producto}" />
                         <input type="hidden" name="cantidad" th:field="*{cantidad}" />
                     <input type="submit" name="enviar" value="Enviar">
-                </form>         
+                </form>   -->      
             </li>
         </ul>
         <div class="d-flex justify-content-between">

@@ -26,7 +26,7 @@
                     </a>
                 </div>
                 <div id="collapseOne" class="collapse container" data-bs-parent="#accordion">
-                    <ul >
+                    <ul>
                         <li class="card-body d-flex border border-1 border-dark justify-content-around  row" th:each="producto : ${productos}">
                             <img th:src="${producto.url}" alt="Una imagen" class="col-4 col-md-3">
                             <div  class="col-4 col-md-3" th:text="${producto.nombre}"></div>
